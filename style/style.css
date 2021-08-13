@@ -1,0 +1,152 @@
+:root {
+  --header-height: 6rem;
+  /* =====================Colors======================= */
+  /* ====Change favorite color===== */
+  --hue-color: 147; /*Purple:250 - Green:142 - Blue:230 - Pink:340*/
+
+  --first-color: hsl(var(--hue-color), 85%, 22%);
+  --first-color-secondary: hsl(147, 76%, 30%);
+  --first-color-alt: ;
+  --first-color-lighter: ;
+  --title-color: ;
+	--white:hsl(161, 29%, 89%);
+  --text-color: var(--white);
+  --text-color-light: ;
+  --input-color: ;
+  --body-color: ;
+  --container-color: ;
+
+  /* ============Font and Typografy============= */
+  --title-font: 'STIX Two Text', serif;
+  --text-font: 'Montserrat', sans-serif;
+
+	--big-font-size: 7rem;
+  --h1-font-size: 5rem;
+  --h2-font-size: 4rem;
+  --h3-font-size: 3rem;
+  --normal-font-size: 1.6rem;
+  --small-font-size: ;
+  --smaller-font-size: ;
+
+  /* ============Font weigth============= */
+  --font-medium: ;
+  --font-semi-bold: ;
+
+  /* =========Font size for large devices========= */
+
+  @media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 10rem;
+      --h1-font-size: 7rem;
+      --h2-font-size: 6rem;
+      --h3-font-size: 5rem;
+      --normal-font-size: 2rem;
+      --small-font-size: ;
+      --smaller-font-size: ;
+    }
+  }
+}
+/* =========Variables Dark Mode========= */
+/* =========Button Dark/Linght========= */
+
+/* =========BASE========= */
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin: 0;
+}
+html {
+  font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body{
+	background-color: var(--white);
+}
+
+h1,h2,h3,h4{
+	color:var(--text-color);
+	font-weight: 400;
+	font-family: var(--title-font);
+}
+ul{
+	list-style: none;
+	color:var(--text-color);
+}
+a{
+	text-decoration: none;
+	color:var(--text-color);
+	font-family: var(--text-font);
+}
+
+header{
+	height: var(--header-height);
+	background-color: var(--first-color);
+	padding-top: 1rem;
+}
+nav{
+	display:flex;
+	margin: 0 10% 0 10%;
+	
+}
+.nav__logo{
+	font-size: var(--h3-font-size);
+}
+/*==Menu Open==*/
+.nav__menu{
+	background-color: var(--first-color);
+	height: 200px;
+	width: 50%;
+	position: fixed;  /*Ojo Aqui*/
+	right: -100%;
+	top: var(--header-height);
+	border-radius: 0 0 0 15px;
+	z-index: 1;
+	transition: .5s;
+}
+
+.show {
+	right: 0vw;
+}
+
+.nav__list li{
+	font-size: var(--normal-font-size);
+	margin: 3rem 1rem 3rem 1.5rem;
+}
+.nav__open{
+	font-size: var(--h3-font-size);
+	color: var(--text-color);	
+	position: absolute;
+	right: 2rem;	
+}
+.home{
+	height: 500px;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	padding-top: 5rem;
+}
+.home__profile-img{
+
+	
+}
+.home__profile-img img{
+	background-color: var(--first-color-secondary);
+	/* border-radius: 39% 60% 35% 65% / 57% 80% 20% 43% ; */
+/* border-radius: 53% 40% 42% 46% / 47% 35% 37% 40% ; */
+/* border-radius: 43% 58% 56% 46% / 41% 63% 37% 53% ; */
+/* border-radius: 66% 34% 63% 37% / 47% 69% 31% 53%  ; */
+border-radius: 39% 61% 36% 64% / 47% 61% 39% 53% ;
+	width: 250px;
+	height: 250px;
+  box-shadow: 3px 3px 3px 3px rgba(23, 117, 109, 0.363);
+
+}
+
+/* =========Header========= */
+/* =========Main========= */
+/* =========Home========= */
+/* =========Skills========= */
+/* =========Projects========= */
+/* =========Contact========= */
+
+
