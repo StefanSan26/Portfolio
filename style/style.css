@@ -18,13 +18,14 @@
   --container-color: ;
 
   /* ============Font and Typografy============= */
-  --title-font: "STIX Two Text", serif;
-  --text-font: "Montserrat", sans-serif;
+  --text-font: "Roboto", serif;
+  --title-font: "Montserrat", sans-serif;
 
   --big-font-size: 7rem;
   --h1-font-size: 5rem;
   --h2-font-size: 4rem;
   --h3-font-size: 3rem;
+  --h4-font-size: 2.5rem;
   --normal-font-size: 1.7rem;
   --small-font-size: ;
   --smaller-font-size: ;
@@ -41,6 +42,7 @@
       --h1-font-size: 7rem;
       --h2-font-size: 6rem;
       --h3-font-size: 5rem;
+  --h4-font-size: 3.5rem;
       --normal-font-size: 2rem;
       --small-font-size: ;
       --smaller-font-size: ;
@@ -84,6 +86,10 @@ h3{
 	font-weight: 400;
 	font-size: var(--h3-font-size);
 }
+h4{
+	font-size: var(--h4-font-size);
+	color: var(--black);
+}
 p{
 	font-size: var(--normal-font-size);
 	font-family: var(--text-font);
@@ -96,7 +102,10 @@ ul {
 li{
 	color: var(--white);
 }
-a {
+a{
+  text-decoration: none;
+}
+header a {
   text-decoration: none;
   color: var(--white);
   font-family: var(--text-font);
@@ -107,10 +116,17 @@ header {
   background-color: var(--first-color);
   padding-top: 1rem;
 	margin-bottom: 3rem;
+	position: fixed;
+  top: 0px;
+  width: 100%;
 }
 nav {
   display: flex;
   margin: 0 10% 0 10%;
+}
+figcaption{
+	font-family: var(--text-font);
+	font-size: var(--normal-font-size);
 }
 /* =========Header========= */
 
@@ -146,10 +162,11 @@ nav {
 }
 
 /* =========Main========= */
+.section{
+	margin-top: 5rem;
+}
 /* =========Home========= */
 .home {
-  height: 500px;
-  width: 100vw;
   display: flex;
   align-items: center;
   padding-top: 5rem;
@@ -162,11 +179,11 @@ nav {
   border-radius: 39% 61% 36% 64% / 47% 61% 39% 53%; /*https://9elements.github.io/fancy-border-radius/ */
   width: 250px;
   height: 250px;
-  box-shadow: 3px 3px 3px 3px rgba(var(--hue-color), 117, 109, 0.363);
+  /* box-shadow: 3px 3px 3px 3px rgba(115, 117, 109, 0.363); */
 }
 
 .home__description{
-	margin: 2rem auto;
+	margin: 4rem auto;
 }
 
 /* =========Skills========= */
@@ -174,12 +191,14 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 10rem;
-}
-.skills_title{
-	font-size: var(--h3-font-size);
-	text-align: center;
 
+}
+.title{
+	text-align: center;
+	margin-top: 8rem;
+	padding-bottom: 8rem;
+	text-decoration: underline;
+	text-decoration-color: var(--first-color-secondary);
 }
 .skills__container{
 	display: flex;
@@ -207,4 +226,15 @@ nav {
 }
 }
 /* =========Projects========= */
+.project__title a{
+	color: var(--black);
+}
+.project__image1{
+	background-image: url("../assets/Web\ capture_13-8-2021_162043_stefansan26.github.io.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 32rem;
+	width: 32rem;
+}
+
 /* =========Contact========= */
