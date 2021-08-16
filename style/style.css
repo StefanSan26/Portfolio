@@ -2,10 +2,11 @@
   --header-height: 6rem;
   /* =====================Colors======================= */
   /* ====Change favorite color===== */
-  --hue-color: 147; /*Purple:250 - Green:142 - Blue:230 - Pink:340*/
+  --hue-color: 250; /*Purple:250 - Green:142 - Blue:230 - Pink:340*/
 
-  --first-color: hsl(var(--hue-color), 85%, 22%);
-  --first-color-secondary: hsl(147, 76%, 30%);
+  --first-color: hsl(var(--hue-color), 60%, 55%);
+  --first-color-secondary: hsl(250, 60%, 55%);
+	--contrast-color: #FF4081;
   --first-color-alt: ;
   --first-color-lighter: ;
   --title-color: ;
@@ -127,11 +128,13 @@ nav {
 figcaption{
 	font-family: var(--text-font);
 	font-size: var(--normal-font-size);
+	padding-top: 1rem;
 }
 /* =========Header========= */
 
-.nav__logo {
+.nav__logo h3{
   font-size: var(--h3-font-size);
+	font-weight: 600;
 }
 /*==Menu Open==*/
 .nav__menu {
@@ -187,19 +190,25 @@ figcaption{
 }
 
 /* =========Skills========= */
-.skills{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-}
 .title{
 	text-align: center;
 	margin-top: 8rem;
 	padding-bottom: 8rem;
 	text-decoration: underline;
-	text-decoration-color: var(--first-color-secondary);
+	text-decoration-color: var(--contrast-color);
 }
+.skills{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--first-color);
+	color: var(--white);
+	padding-bottom: 8rem;
+}
+.skills__title {
+	text-decoration-color: var(--contrast-color);
+}
+
 .skills__container{
 	display: flex;
 	flex-direction: row;
@@ -226,8 +235,21 @@ figcaption{
 }
 }
 /* =========Projects========= */
+
+.project{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2rem;
+	justify-content: space-evenly;
+}
+.project__text{
+	max-width: 35rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
 .project__title a{
 	color: var(--black);
+	
 }
 .project__image1{
 	background-image: url("../assets/Web\ capture_13-8-2021_162043_stefansan26.github.io.jpeg");
@@ -235,6 +257,7 @@ figcaption{
 	background-size: cover;
 	height: 32rem;
 	width: 32rem;
+	border-radius: 10px;
 }
 
 /* =========Contact========= */
