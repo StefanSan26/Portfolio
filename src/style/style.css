@@ -294,15 +294,25 @@ figcaption {
 .project__title a {
   color: var(--black);
 }
-.project__image1 {
+.project__image {
   display: inline-block;
-  background-image: url("../assets/images/batatabit_desktop.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 32rem;
-  width: 32rem;
+	background-position: center;
+  height: 40rem;
+  width: 40rem;
   border-radius: 10px;
 }
+.project__image1 {
+  background-image: url("../../assets/images/batatabit_desktop.jpeg");
+}
+.project__image2 {
+  background-image: url("../../assets/images/pricing-calculator_desktop2.jpeg");
+}
+.project__image3 {
+  background-image: url("../../assets/images/SpaceX-Rockets.jpeg");
+}
+
 @media screen and  (min-width: 768px){
 	.project2{
 		flex-direction: row-reverse;
