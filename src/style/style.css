@@ -7,17 +7,9 @@
   --first-color: hsl(var(--hue-color), 60%, 55%);
   --first-color-secondary: hsl(250, 100%, 94%);
   --contrast-color: #ff4081;
-  --first-color-alt: ;
-  --first-color-lighter: ;
-  --title-color: ;
   --black: hsl(var(--hue-color), 10%, 5%);
   --white: hsl(161, 29%, 89%);
   --white-hover: hsl(232, 55%, 83%);
-  --text-color: ;
-  --text-color-light: ;
-  --input-color: ;
-  --body-color: ;
-  --container-color: ;
 
   /* ============Font and Typografy============= */
   /* --text-font: "Roboto", serif; */
@@ -33,12 +25,7 @@
   --h3-font-size: 3rem;
   --h4-font-size: 2rem;
   --normal-font-size: 1.6rem;
-  --small-font-size: ;
-  --smaller-font-size: ;
 
-  /* ============Font weigth============= */
-  --font-medium: ;
-  --font-semi-bold: ;
 
   /* =========Font size for large devices========= */
 
@@ -50,13 +37,10 @@
       --h3-font-size: 5rem;
       --h4-font-size: 3rem;
       --normal-font-size: 1.8rem;
-      --small-font-size: ;
-      --smaller-font-size: ;
     }
   }
 }
-/* =========Variables Dark Mode========= */
-/* =========Button Dark/Linght========= */
+
 
 /* =========BASE========= */
 * {
@@ -120,7 +104,6 @@ header a {
 header {
   height: var(--header-height);
   background-color: var(--first-color);
-  /* padding-top: 1rem; */
   margin-bottom: 3rem;
   position: fixed;
   top: 0px;
@@ -150,12 +133,11 @@ figcaption {
   background-color: var(--first-color);
   height: 200px;
   width: 50%;
-  position: fixed; /*Ojo Aqui*/
+  position: fixed; /*-*/
   right: -50%;
   top: var(--header-height);
   border-radius: 0 0 0 15px;
   z-index: 1;
-  /* transition: 0.5s; */
 }
 
 .show {
@@ -222,7 +204,6 @@ figcaption {
   border-radius: 39% 61% 36% 64% / 47% 61% 39% 53%; /*https://9elements.github.io/fancy-border-radius/ */
   width: 250px;
   height: 250px;
-  /* box-shadow: 3px 3px 3px 3px rgba(115, 117, 109, 0.363); */
 }
 
 .home__description {
@@ -283,6 +264,7 @@ figcaption {
   justify-content: space-evenly;
   align-items: center;
 }
+
 .project__text {
   max-width: 35rem;
   text-align: center;
@@ -298,11 +280,14 @@ figcaption {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: cover;
-	background-position: center;
-  height: 40rem;
+	background-position: top;
+	height: 40rem;
+  min-height: 20rem;
   width: 40rem;
-  border-radius: 10px;
+  min-width: 20rem;
+  border-radius: 5px;
 }
+
 .project__image1 {
   background-image: url("../../assets/images/batatabit_desktop.jpeg");
 }
@@ -378,5 +363,4 @@ figcaption {
 .bx{
 	font-size: 3rem;
 	color: var(--white);
-	
 }
