@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("nav-open"),n=document.getElementById("nav-menu"),t=document.querySelectorAll(".nav__link");function c(){n.classList.toggle("show"),n.style.transition="0.5s"}e.addEventListener("click",c),t.forEach((e=>e.addEventListener("click",c)))})();
