@@ -1,4 +1,8 @@
-# PORTFOLIO 
+# PORTFOLIO 🚀
+
+### Description
+
+My Portfolio: where you can checkout my Skills and Projects 💚
 
 ### Built with
 
@@ -10,4 +14,5 @@
 
 
 ### Links
+
 - Live Site URL: [Here](https://stefansan26.github.io/portfolio/)
