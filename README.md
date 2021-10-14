@@ -15,4 +15,4 @@ My Portfolio: where you can checkout my Skills and Projects 💚
 
 ### Links
 
-- Live Site URL: [Here](https://stefansan26.github.io/portfolio/)
+- Live Site URL: [Here](https://stefansan26.github.io/Portfolio/)
