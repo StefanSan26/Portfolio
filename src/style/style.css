@@ -202,7 +202,7 @@ figcaption {
   border-radius: 39% 61% 36% 64% / 47% 61% 39% 53%; /*https://9elements.github.io/fancy-border-radius/ */
   width: 250px;
   height: 250px;
-	box-shadow:-4px 3px 8px 0px #1c1426;
+  box-shadow:-4px 3px 8px 0px #1c1426;
 }
 
 .home__description {
