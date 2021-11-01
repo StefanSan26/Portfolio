@@ -278,28 +278,25 @@ figcaption {
 
 .project__image {
   display: inline-block;
-  background-repeat: no-repeat;
-  background-size: cover;
-	background-position: top;
-	height: 40rem;
+
+}
+
+.project__image img{
   width: 40rem;
   border-radius: 5px;
 }
+.project__image1 {
+  width: 40rem;
+	display: flex;
+  justify-content: center;
+}
+.project__image1 img{
+  width: 30rem;
+}
 @media screen and (max-width: 425px) {
-  .project__image{
-		height: 30rem;
+  .project__image img{
 		width: 30rem;
 	}
-}
-
-.project__image1 {
-  background-image: url("./assets/images/batatabit_desktop.webp");
-}
-.project__image2 {
-  background-image: url("./assets/images/pricing-calculator_desktop2.webp");
-}
-.project__image3 {
-  background-image: url("./assets/images/SpaceX-Rockets.webp");
 }
 
 @media screen and  (min-width: 768px){
