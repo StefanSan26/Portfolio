@@ -3,15 +3,15 @@
   /* =====================Colors======================= */
   --hue-color: 230; /*Purple:250 - Green:142 - Blue:230 - Pink:340*/
 
-  --first-color: hsl(var(--hue-color), 60%, 55%);
-  --first-color-secondary: hsl(250, 100%, 94%);
+  --first-color:#4354a8;
+  --first-color-secondary: #e5e0ff;
   --contrast-color: #ff4081;
-  --black: hsl(var(--hue-color), 10%, 5%);
-  --white: hsl(161, 29%, 89%);
-  --white-hover: hsl(232, 55%, 83%);
+  --black: hsl(230deg 50.42% 17.7%);
+  --white: #f1f1f1;
+  --white-hover: #bcc2eb;
 
   /* ============Font and Typografy============= */
-  --title-font: 'Sanchez',sans-serif;
+  --title-font: 'Poppins',sans-serif;
   --text-font:  'Quicksand', sans-serif;
   --system-font: -apple-system, linkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
@@ -51,7 +51,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: var(--white);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 h2,
@@ -63,16 +64,18 @@ h1 {
   font-family: var(--title-font);
   font-size: var(--h1-font-size);
   margin-top: 3rem;
-  font-weight: 500;
+  font-weight: 200;
 }
 h2 {
   font-size: var(--h2-font-size);
-  font-weight: 300;
+  font-weight: 200;
   margin-top: 1rem;
+  font-family: var(--title-font);
 }
 h3 {
-  font-weight: 400;
+  font-weight: 200;
   font-size: var(--h3-font-size);
+  font-family: var(--title-font);
 }
 h4 {
   font-size: var(--h4-font-size);
@@ -106,12 +109,14 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
+  border-radius: 0 0 5px 4px;
+  border-bottom: 1px solid #7d8ade70;
 }
 nav {
   display: flex;
   margin: 0 10%;
   align-items: center;
-  height: 100%;
+  height: 98%;
 }
 figcaption {
   font-family: var(--text-font);
@@ -122,7 +127,7 @@ figcaption {
 
 .nav__logo h3 {
   font-size: var(--h3-font-size);
-  font-weight: 500;
+  font-weight: 300;
 	font-family: var(--title-font);
 }
 /*==Menu Open==*/
@@ -155,7 +160,7 @@ figcaption {
   display: inline-block;
 }
 .nav__link{
-	font-weight: 600;
+	font-weight: 200;
 }
 .nav__link:hover, .bx:hover{
 	color: var(--white-hover);
@@ -199,10 +204,12 @@ figcaption {
 
 .home__profile-img img {
   background-color: var(--first-color);
-  border-radius: 39% 61% 36% 64% / 47% 61% 39% 53%; /*https://9elements.github.io/fancy-border-radius/ */
+  /* border-radius: 55% 45% 39% 50% / 47% 51% 49% 53%; */ /*https://9elements.github.io/fancy-border-radius/ */
+  /* box-shadow: -1px -1px 10px 3px var(--first-color); */
   width: 250px;
   height: 250px;
-  box-shadow:-4px 3px 8px 0px #1c1426;
+  border-radius: 15%;
+  border: 1px solid #7d8ade70;
 }
 
 .home__description {
@@ -214,7 +221,7 @@ figcaption {
   text-align: center;
   margin-top: 8rem;
   padding-bottom: 8rem;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-decoration-color: var(--contrast-color);
 }
 .skills {
@@ -273,7 +280,9 @@ figcaption {
   margin-bottom: 2rem;
 }
 .project__title a {
-  color: rgb(37, 8, 49);
+  color: var(--white-hover);
+  font-family: var(--title-font);
+  font-weight: 200;
 }
 
 .project__image {
@@ -282,8 +291,9 @@ figcaption {
 }
 
 .project__image img{
+  border-radius: 30px;
   width: 40rem;
-  border-radius: 5px;
+  border: 1px solid #7d8ade70;  
 }
 .project__image1 {
   width: 40rem;
@@ -318,11 +328,14 @@ figcaption {
   background-color: var(--first-color);
   color: var(--white);
   border-radius: 10px;
-  height: 6rem;
-  width: 14rem;
+  height: 7rem;
+  width: 18rem;
   border: none;
   cursor: pointer;
-  font-size: var(--h4-font-size);
+  font-size: var(--normal-font-size);
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 200;
 }
 /* Grow */
 .hvr-grow {
@@ -334,12 +347,13 @@ figcaption {
 	-moz-osx-font-smoothing: grayscale;
 	transition-duration: 0.3s;
 	transition-property: transform;
+  border: 1px solid #7d8ade70;
 }
 
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
-	transform: scale(1.1);
+	transform: scale(1.015);
 }
 
 /* =========Footer========= */
