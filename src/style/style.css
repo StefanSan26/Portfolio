@@ -1,12 +1,12 @@
 :root {
-  --header-height: 5rem;
+  --header-height: 6rem;
   /* =====================Colors======================= */
   --hue-color: 230; /*Purple:250 - Green:142 - Blue:230 - Pink:340*/
 
   --first-color:#4354a8;
   --first-color-secondary: #e5e0ff;
   --contrast-color: #ff4081;
-  --black: hsl(230deg 50.42% 17.7%);
+  --black: #151E3F;
   --white: #f1f1f1;
   --white-hover: #bcc2eb;
 
@@ -110,7 +110,8 @@ header {
   top: 0px;
   width: 100%;
   border-radius: 0 0 5px 4px;
-  border-bottom: 1px solid #7d8ade70;
+  border-bottom: 1px solid #6172e070;
+  box-shadow: -7px 7px 18px 3px #1c1426;
 }
 nav {
   display: flex;
@@ -127,7 +128,7 @@ figcaption {
 
 .nav__logo h3 {
   font-size: var(--h3-font-size);
-  font-weight: 300;
+  font-weight: 200;
 	font-family: var(--title-font);
 }
 /*==Menu Open==*/
@@ -197,7 +198,7 @@ figcaption {
 .home {
   display: flex;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 9rem;
   flex-direction: column;
   text-align: center;
 }
@@ -205,11 +206,11 @@ figcaption {
 .home__profile-img img {
   background-color: var(--first-color);
   /* border-radius: 55% 45% 39% 50% / 47% 51% 49% 53%; */ /*https://9elements.github.io/fancy-border-radius/ */
-  /* box-shadow: -1px -1px 10px 3px var(--first-color); */
+  box-shadow: -7px 7px 18px 3px #1c1426;
   width: 250px;
   height: 250px;
   border-radius: 15%;
-  border: 1px solid #7d8ade70;
+  border-top: 1px solid #888;
 }
 
 .home__description {
@@ -266,7 +267,7 @@ figcaption {
 .project {
   display: flex;
   flex-wrap: wrap;
-  margin: 6rem;
+  margin-bottom: 9rem;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -293,10 +294,11 @@ figcaption {
 .project__image img{
   border-radius: 30px;
   width: 40rem;
-  border: 1px solid #7d8ade70;  
+  border-top: 1px solid #444;
+  box-shadow: -7px 7px 18px 3px #1c1426;
 }
 .project__image1 {
-  width: 40rem;
+  max-width: 40rem;
 	display: flex;
   justify-content: center;
 }
@@ -316,7 +318,7 @@ figcaption {
 }
 /* =========Contact========= */
 .contact {
-  margin: 10rem;
+  margin: 10rem auto;
   display: flex;
 }
 
@@ -342,12 +344,12 @@ figcaption {
 	display: inline-block;
 	vertical-align: middle;
 	transform: translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	box-shadow: -7px 7px 18px 3px #1c1426;
 	backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	transition-duration: 0.3s;
 	transition-property: transform;
-  border: 1px solid #7d8ade70;
+  border-top: 1px solid #888;
 }
 
 .hvr-grow:hover,
