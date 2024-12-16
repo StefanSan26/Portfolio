@@ -304,7 +304,7 @@ figcaption {
     width: 30rem;
 }
 .project__image3 img {
-    width: 30rem;
+    width: 40rem;
 }
 @media screen and (max-width: 425px) {
     .project__image img {
