@@ -13,9 +13,9 @@
     /* ============Font and Typografy============= */
     --title-font: "Poppins", sans-serif;
     --text-font: "Quicksand", sans-serif;
-    --system-font: -apple-system, linkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
+    --system-font:
+        -apple-system, linkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+        Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     --big-font-size: 7rem;
     --h1-font-size: 5rem;
@@ -301,7 +301,10 @@ figcaption {
     justify-content: center;
 }
 .project__image1 img {
-    width: 30rem;
+    width: 40rem;
+}
+.project__image2 img {
+    width: 34rem;
 }
 .project__image3 img {
     width: 40rem;

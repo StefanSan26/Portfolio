@@ -2,7 +2,7 @@
 
 ### Description
 
-My Portfolio: where you can checkout my Skills and Projects 💚
+My Portfolio: where you can check my Skills and Projects 💚
 
 ### Built with
 
