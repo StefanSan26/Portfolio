@@ -16,19 +16,7 @@
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Sanchez:ital@0;1&family=Ubuntu:wght@400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
             rel="stylesheet"
         />
         <link
@@ -36,11 +24,12 @@
             href="./assets/svg/portfolio-favicon.png"
             type="image/x-icon"
         />
-        <title>Stefan Sanchez | Machine Learning Engineer</title>
+        <title>Stefan Sánchez — Machine Learning Engineer</title>
         <meta
             name="description"
-            content="Machine Learning Engineer with Civil Engineering degree and programming experience"
+            content="Machine Learning Engineer with a Civil Engineering background. I build production-grade ML systems end-to-end — from data to deployment."
         />
+        <meta name="theme-color" content="#07090f" />
         <meta
             property="og:image"
             content="https://stefans-portfolio.netlify.app/assets/images/gh-profile.avif"
@@ -51,11 +40,11 @@
         />
         <meta
             property="og:title"
-            content="Stefan Sánchez | Machine Learning Engineer"
+            content="Stefan Sánchez — Machine Learning Engineer"
         />
         <meta
             property="og:description"
-            content="Machine Learning Engineer with Civil Engineering degree and programming experience"
+            content="Machine Learning Engineer with a Civil Engineering background. I build production-grade ML systems end-to-end."
         />
         <meta
             property="og:url"
@@ -69,248 +58,370 @@
     </head>
 
     <body>
-        <header class="header">
+        <header class="header" id="header">
             <nav class="nav">
                 <div class="nav__logo">
                     <a href="#home">
-                        <h3>Stefan</h3>
+                        <span class="nav__logo-mark">S</span>
+                        <span>Stefan</span>
                     </a>
                 </div>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt"></i> Skills
+                            <a href="#about" class="nav__link" data-nav>
+                                <span class="nav__num">01.</span> About
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#projects" class="nav__link">
-                                <i class="uil uil-bag-alt"></i> Projects
+                            <a href="#skills" class="nav__link" data-nav>
+                                <span class="nav__num">02.</span> Skills
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-comment-add"></i> Contact
+                            <a href="#projects" class="nav__link" data-nav>
+                                <span class="nav__num">03.</span> Projects
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link" data-nav>
+                                <span class="nav__num">04.</span> Contact
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="nav__btns">
-                    <div class="nav__toggle" id="nav-toggle">
+                    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
                         <i class="uil uil-bars nav__open" id="nav-open"></i>
-                    </div>
+                    </button>
                 </div>
-                <div class="nav__menu-show"><i></i></div>
             </nav>
         </header>
 
-        <!--==================== MAIN ====================-->
         <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__profile-img">
-                    <img src="assets/images/gh-profile.avif" alt="" />
-                </div>
-                <h1 class="home__name">Stefan Sánchez</h1>
-                <h3 class="home__profession">Data Scientist</h3>
-                <p class="home__description">
-                    With a degree in Civil Engineering and professional                    programming experience<br />
-                    I love mathemathics and what we can build with it<br />
-                    Let me show you some of my Skills and Projects 👇
+            <!--==================== HERO ====================-->
+            <section class="hero section" id="home">
+                <p class="hero__greeting" data-reveal>Hi, my name is</p>
+                <h1 class="hero__name" data-reveal data-reveal-delay="1">
+                    Stefan <em>Sánchez.</em>
+                </h1>
+                <p class="hero__role" data-reveal data-reveal-delay="2">
+                    I build things with <span>data &amp; code.</span>
                 </p>
+                <p class="hero__lead" data-reveal data-reveal-delay="3">
+                    I'm a <em>Machine Learning Engineer</em> who loves turning
+                    raw data into reliable, deployable systems. My civil
+                    engineering background gave me a strong mathematical
+                    foundation — and today I focus on applied ML that ships:
+                    classification, computer vision, and end-to-end pipelines.
+                </p>
+                <div class="hero__cta" data-reveal data-reveal-delay="4">
+                    <a href="#projects" class="btn btn--primary">
+                        View my work
+                        <span class="btn__arrow">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn--ghost">
+                        Get in touch
+                    </a>
+                </div>
+                <div class="hero__meta" data-reveal data-reveal-delay="5">
+                    <div>
+                        <span class="status-dot"></span>Open to opportunities
+                    </div>
+                    <div>Based in <span>Colombia</span></div>
+                </div>
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about"></section>
+            <section class="about section" id="about">
+                <div data-reveal>
+                    <span class="section-label">01. About</span>
+                    <h2 class="section-heading">
+                        Mathematical roots. <em>ML by craft.</em>
+                    </h2>
+                </div>
+                <div class="about__grid">
+                    <div class="about__text" data-reveal data-reveal-delay="1">
+                        <p>
+                            I'm Stefan — a <strong>Machine Learning Engineer</strong>.
+                            My civil engineering background gave me a strong
+                            mathematical foundation, and that's shaped how I
+                            approach every problem: rigorous math, structured
+                            thinking, and a deep respect for getting the
+                            details right.
+                        </p>
+                        <p>
+                            Today I work across the full ML lifecycle — from
+                            exploring messy data and engineering features, to
+                            training and evaluating models, to deploying them
+                            as real products. I care about writing code that
+                            other people (and future-me) can read.
+                        </p>
+                        <p>
+                            When I'm not training models, you'll find me on
+                            Kaggle, reading papers, or sketching out the next
+                            side project.
+                        </p>
+                    </div>
+                    <div class="about__stats" data-reveal data-reveal-delay="2">
+                        <div class="stat-card">
+                            <div class="stat-card__num">3+</div>
+                            <div class="stat-card__label">Years coding</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__num">10+</div>
+                            <div class="stat-card__label">ML projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__num">5+</div>
+                            <div class="stat-card__label">End-to-end apps</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__num">∞</div>
+                            <div class="stat-card__label">Curiosity</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills">
-                <h3 class="skills__title title">Skills</h3>
-                <div class="skills__container">
-                    <figure class="skills__logo fig1">
-                        <img
-                            src="./assets/svg/Python-logo-notext.svg"
-                            alt="Python"
-                        />
-                        <figcaption>Python</figcaption>
-                    </figure>
-                    <figure class="skills__logo fig2">
-                        <img
-                            src="./assets/svg/Scikit_learn_logo_small.svg"
-                            alt="Scikit Learn"
-                        />
-                        <figcaption>Scikit Learn</figcaption>
-                    </figure>
-                    <figure class="skills__logo fig3">
-                        <img
-                            src="./assets/svg/Tensorflow_logo.svg"
-                            alt="TensorFlow"
-                        />
-                        <figcaption>TensorFlow</figcaption>
-                    </figure>
-                    <figure class="skills__logo fig4">
-                        <img src="assets/images/sql.avif" alt="sql" />
-                        <figcaption>SQL</figcaption>
-                    </figure>
-                    <figure class="skills__logo fig6">
-                        <img
-                            src="./assets/svg/Octicons-mark-github.svg"
-                            alt="Git & Github"
-                        />
-                        <figcaption>Git & Github</figcaption>
-                    </figure>
-                    <figure class="skills__logo fig5">
-                        <img
-                            src="assets/images/HTML-CSS-JS-Logo.avif"
-                            alt="Web Development"
-                        />
-                        <figcaption>Web Develpment</figcaption>
-                    </figure>
+                <div data-reveal>
+                    <span class="section-label">02. Skills</span>
+                    <h2 class="section-heading">
+                        Tools I reach for <em>daily.</em>
+                    </h2>
+                    <p class="section-lead">
+                        A focused stack I use to move projects from idea to
+                        production — with the occasional deep dive into
+                        something new.
+                    </p>
+                </div>
+                <div class="skills__grid">
+                    <article class="skill-card" data-reveal data-reveal-delay="1">
+                        <div class="skill-card__icon">
+                            <img src="./assets/svg/Python-logo-notext.svg" alt="Python" />
+                        </div>
+                        <h3 class="skill-card__name">Python</h3>
+                        <span class="skill-card__desc">Core language</span>
+                    </article>
+                    <article class="skill-card" data-reveal data-reveal-delay="2">
+                        <div class="skill-card__icon">
+                            <img src="./assets/svg/Scikit_learn_logo_small.svg" alt="Scikit Learn" />
+                        </div>
+                        <h3 class="skill-card__name">Scikit-learn</h3>
+                        <span class="skill-card__desc">Classical ML</span>
+                    </article>
+                    <article class="skill-card" data-reveal data-reveal-delay="3">
+                        <div class="skill-card__icon">
+                            <img src="./assets/svg/Tensorflow_logo.svg" alt="TensorFlow" />
+                        </div>
+                        <h3 class="skill-card__name">TensorFlow</h3>
+                        <span class="skill-card__desc">Deep learning</span>
+                    </article>
+                    <article class="skill-card" data-reveal data-reveal-delay="4">
+                        <div class="skill-card__icon">
+                            <img src="assets/images/sql.avif" alt="SQL" />
+                        </div>
+                        <h3 class="skill-card__name">SQL</h3>
+                        <span class="skill-card__desc">Data wrangling</span>
+                    </article>
+                    <article class="skill-card" data-reveal data-reveal-delay="5">
+                        <div class="skill-card__icon">
+                            <img src="assets/images/HTML-CSS-JS-Logo.avif" alt="Web" />
+                        </div>
+                        <h3 class="skill-card__name">Web Stack</h3>
+                        <span class="skill-card__desc">HTML · CSS · JS</span>
+                    </article>
+                    <article class="skill-card" data-reveal data-reveal-delay="6">
+                        <div class="skill-card__icon">
+                            <img src="./assets/svg/Octicons-mark-github.svg" alt="GitHub" />
+                        </div>
+                        <h3 class="skill-card__name">Git &amp; GitHub</h3>
+                        <span class="skill-card__desc">Version control</span>
+                    </article>
                 </div>
             </section>
 
-            <!--==================== PORTFOLIO ====================-->
+            <!--==================== PROJECTS ====================-->
             <section class="projects section" id="projects">
-                <h3 class="projects__title title">Projects</h3>
-                <div class="project project1">
-                    <div class="project__text">
-                        <h4 class="project__title">
-                            <a
-                                href="https://github.com/StefanSan26/bank_customer_churn_prediction/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >End to End Project: Bank Customer Churn
-                                Prediction</a
-                            >
-                        </h4>
-                        <p class="project__description">
-                            This project consist on predicting whether a
-                            customer continues with their account or closes it.
-                            In this project I used an Catboost Classifier Model
-                            to predict the churn of the customers.
-                        </p>
-                    </div>
-                    <a
-                        href="https://github.com/StefanSan26/bank_customer_churn_prediction/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="project__image project__image1">
+                <div data-reveal>
+                    <span class="section-label">03. Projects</span>
+                    <h2 class="section-heading">
+                        Things I've <em>built.</em>
+                    </h2>
+                    <p class="section-lead">
+                        A few selected projects. Each one is a complete loop:
+                        data → model → evaluation → something a real user can
+                        click.
+                    </p>
+                </div>
+                <div class="projects__list">
+                    <article class="project" data-reveal>
+                        <div class="project__image-wrap">
+                            <span class="project__badge">Featured</span>
                             <img
-                                src="./assets/images/bank-customer.avif"
-                                alt=""
+                                src="./assets/images/cover-churn.png"
+                                alt="Bank Customer Churn Prediction"
                             />
-                            <div class="project__overlay">
-                                <div class="project__buttons">
-                                    <a
-                                        href="https://github.com/StefanSan26/bank_customer_churn_prediction/"
-                                        class="project__button"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        >View Code</a
-                                    >
-                                    <a
-                                        href="https://bank-customer-website.vercel.app/"
-                                        class="project__button live-project"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        >View Live Project</a
-                                    >
-                                </div>
+                        </div>
+                        <div class="project__body">
+                            <span class="project__num">01 / Project</span>
+                            <h3 class="project__title">
+                                <a
+                                    href="https://github.com/StefanSan26/bank_customer_churn_prediction/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >End-to-End: Bank Customer Churn Prediction</a
+                                >
+                            </h3>
+                            <p class="project__desc">
+                                Predicting whether a bank customer will stay or
+                                close their account. Built end-to-end with a
+                                CatBoost classifier — from feature engineering
+                                to a deployed web app.
+                            </p>
+                            <ul class="project__tags">
+                                <li class="tag">Python</li>
+                                <li class="tag">CatBoost</li>
+                                <li class="tag">scikit-learn</li>
+                                <li class="tag">Deployment</li>
+                            </ul>
+                            <div class="project__links">
+                                <a
+                                    href="https://github.com/StefanSan26/bank_customer_churn_prediction/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="link-btn"
+                                    >View code <span>↗</span></a
+                                >
+                                <a
+                                    href="https://bank-customer-website.vercel.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="link-btn"
+                                    >Live demo <span>↗</span></a
+                                >
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="project project2">
-                    <div class="project__text">
-                        <h4 class="project__title">
-                            <a
-                                href="https://www.kaggle.com/code/stefansanchez26/cats-and-dogs-classifier/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >Cats & Dogs Classifier</a
-                            >
-                        </h4>
-                        <p class="project__description">
-                            In this project, I used transfer learning with the
-                            Xception architecture and pre-trained ImageNet
-                            weights to build a Convolutional Neural Network that
-                            classifies images as either cats or dogs.
-                        </p>
-                    </div>
-                    <a
-                        href="https://www.kaggle.com/code/stefansanchez26/cats-and-dogs-classifier/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="project__image project__image2">
-                            <img src="./assets/images/cats-dogs.avif" alt="" />
-                            <div class="project__overlay">
+                    </article>
+
+                    <article class="project" data-reveal>
+                        <div class="project__image-wrap">
+                            <img
+                                src="./assets/images/cover-classifier.png"
+                                alt="Cats and Dogs Classifier"
+                            />
+                        </div>
+                        <div class="project__body">
+                            <span class="project__num">02 / Project</span>
+                            <h3 class="project__title">
                                 <a
                                     href="https://www.kaggle.com/code/stefansanchez26/cats-and-dogs-classifier/"
-                                    class="project__button"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >View Project</a
+                                    >Cats &amp; Dogs Image Classifier</a
+                                >
+                            </h3>
+                            <p class="project__desc">
+                                A convolutional neural network that classifies
+                                images as cat or dog. Built with transfer
+                                learning using the Xception architecture and
+                                ImageNet pre-trained weights.
+                            </p>
+                            <ul class="project__tags">
+                                <li class="tag">TensorFlow</li>
+                                <li class="tag">CNN</li>
+                                <li class="tag">Transfer Learning</li>
+                                <li class="tag">Xception</li>
+                            </ul>
+                            <div class="project__links">
+                                <a
+                                    href="https://www.kaggle.com/code/stefansanchez26/cats-and-dogs-classifier/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="link-btn"
+                                    >View notebook <span>↗</span></a
                                 >
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="project project3">
-                    <div class="project__text">
-                        <h4 class="project__title">
-                            <a
-                                href="https://www.kaggle.com/code/stefansanchez26/ml-ensemble-models/notebook"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Binary Classification of Insurance Cross Selling
-                            </a>
-                        </h4>
-                        <p class="project__description">
-                            The target behind this project is to predict which
-                            customers will respond positively to an automobile
-                            insurance offer using machine learning techniques.
-                        </p>
-                    </div>
-                    <a
-                        href="https://www.kaggle.com/code/stefansanchez26/ml-ensemble-models/notebook"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="project__image project__image3">
-                            <img src="assets/images/insurance.avif" alt="" />
-                            <div class="project__overlay">
+                    </article>
+
+                    <article class="project" data-reveal>
+                        <div class="project__image-wrap">
+                            <img
+                                src="./assets/images/cover-insurance.png"
+                                alt="Insurance Cross Selling"
+                            />
+                        </div>
+                        <div class="project__body">
+                            <span class="project__num">03 / Project</span>
+                            <h3 class="project__title">
                                 <a
                                     href="https://www.kaggle.com/code/stefansanchez26/ml-ensemble-models/notebook"
-                                    class="project__button"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >View Project</a
+                                    >Insurance Cross-Selling Prediction</a
+                                >
+                            </h3>
+                            <p class="project__desc">
+                                Predicting which customers will respond to an
+                                auto insurance offer. Explored and benchmarked
+                                several ensemble models to find the strongest
+                                signal.
+                            </p>
+                            <ul class="project__tags">
+                                <li class="tag">Python</li>
+                                <li class="tag">Ensemble</li>
+                                <li class="tag">Feature Engineering</li>
+                                <li class="tag">Kaggle</li>
+                            </ul>
+                            <div class="project__links">
+                                <a
+                                    href="https://www.kaggle.com/code/stefansanchez26/ml-ensemble-models/notebook"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="link-btn"
+                                    >View notebook <span>↗</span></a
                                 >
                             </div>
                         </div>
-                    </a>
+                    </article>
                 </div>
             </section>
 
-            <!--==================== CONTACT ME ====================-->
+            <!--==================== CONTACT ====================-->
             <section class="contact section" id="contact">
-                <a href="mailto:stefan.san26@gmail.com" class="contact-link"
-                    ><button class="contact-btn hvr-grow">Contact me</button></a
-                >
+                <div class="contact__inner" data-reveal>
+                    <span class="contact__label">04. Contact</span>
+                    <h2 class="contact__title">
+                        Let's build something <em>useful.</em>
+                    </h2>
+                    <p class="contact__text">
+                        I'm currently open to new roles, freelance work, and
+                        interesting ML problems. My inbox is always open —
+                        whether you have a question, a project, or just want
+                        to say hi.
+                    </p>
+                    <a
+                        href="mailto:stefan.san26@gmail.com"
+                        class="btn btn--primary contact__cta"
+                        >Say hello
+                        <span class="btn__arrow">→</span></a
+                    >
+                </div>
             </section>
         </main>
 
-        <!--==================== FOOTER ====================-->
         <footer class="footer">
+            <div>Designed &amp; built by Stefan Sánchez</div>
             <div class="footer__social">
                 <a
                     href="https://github.com/StefanSan26/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="footer__icon"
+                    aria-label="GitHub"
                     ><i class="bx bxl-github"></i
                 ></a>
                 <a
@@ -318,9 +429,9 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="footer__icon"
+                    aria-label="LinkedIn"
                     ><i class="bx bxl-linkedin-square"></i
                 ></a>
-                <!-- <a href="https://twitter.com/Ssteef26" target="_blank" rel="noopener noreferrer" class="footer__icon"><i class="bx bxl-twitter"></i></a> -->
             </div>
         </footer>
     </body>
