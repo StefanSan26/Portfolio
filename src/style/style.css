@@ -204,6 +204,7 @@ main {
 [data-reveal-delay="4"].is-visible { transition-delay: 0.32s; }
 [data-reveal-delay="5"].is-visible { transition-delay: 0.4s; }
 [data-reveal-delay="6"].is-visible { transition-delay: 0.48s; }
+[data-reveal-delay="7"].is-visible { transition-delay: 0.56s; }
 
 @media (prefers-reduced-motion: reduce) {
     [data-reveal] { opacity: 1; transform: none; transition: none; }

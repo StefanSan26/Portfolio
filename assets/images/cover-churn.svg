@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <rect width="800" height="600" fill="#0f1a33"/>
+
+    <g stroke="#1f3056" stroke-width="1" opacity="0.6">
+        <line x1="100" y1="500" x2="700" y2="500"/>
+        <line x1="100" y1="120" x2="100" y2="500"/>
+    </g>
+
+    <g fill="none" stroke="#7b9acc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+        <polyline points="130,430 215,408 300,388 385,348 470,308 555,272 640,248 685,228"/>
+    </g>
+
+    <g fill="none" stroke="#a3b8d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" opacity="0.6">
+        <polyline points="130,448 215,425 300,402 385,366 470,328 555,290 640,262 685,238"/>
+    </g>
+
+    <g fill="#a3b8d8">
+        <circle cx="130" cy="430" r="4"/>
+        <circle cx="215" cy="408" r="4"/>
+        <circle cx="300" cy="388" r="4"/>
+        <circle cx="385" cy="348" r="4"/>
+        <circle cx="470" cy="308" r="4"/>
+        <circle cx="555" cy="272" r="4"/>
+        <circle cx="640" cy="248" r="4"/>
+        <circle cx="685" cy="228" r="4"/>
+    </g>
+</svg>
