@@ -7,10 +7,10 @@
     --surface: #0e1523;
     --surface-hi: #16203a;
 
-    --line-soft: rgba(140, 48, 73, 0.35);
-    --line: rgba(140, 48, 73, 0.56);
-    --line-mid: rgba(140, 48, 73, 0.62);
-    --line-strong: rgba(140, 48, 73, 0.72);
+    --line-soft: rgba(74, 106, 160, 0.24);
+    --line: rgba(74, 106, 160, 0.38);
+    --line-mid: rgba(74, 106, 160, 0.42);
+    --line-strong: rgba(74, 106, 160, 0.49);
 
     --text-0: #eef2f8;
     --text-lg: #dde4ef;
