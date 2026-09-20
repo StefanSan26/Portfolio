@@ -1,11 +1,9 @@
 /*==================== TOKENS ====================*/
 :root {
-    --header-height: 7.1rem;
     --container: 109.2rem;
     --gutter: 4.4rem;
 
     --bg: #060a12;
-    --bg-nav: rgba(7, 9, 13, 0.9);
     --surface: #0e1523;
     --surface-hi: #16203a;
 
@@ -18,7 +16,6 @@
     --text-lg: #dde4ef;
     --text-1: #a7b2c6;
     --text-2: #8492aa;
-    --text-nav: #7c8598;
 
     --accent: #7ba3e0;
     --accent-hi: #a6c4ef;
@@ -45,7 +42,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-height) + 2rem);
+    scroll-padding-top: 2rem;
 }
 
 body {
@@ -100,23 +97,6 @@ h3 {
     outline-offset: 3px;
 }
 
-.skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    z-index: 1100;
-    padding: 1.2rem 2rem;
-    background: var(--accent);
-    color: var(--bg);
-    font-family: var(--mono-font);
-    font-size: 1.2rem;
-}
-
-.skip-link:focus {
-    left: 1rem;
-    top: 1rem;
-}
-
 /*==================== REVEAL ====================*/
 [data-reveal] {
     opacity: 0;
@@ -137,109 +117,6 @@ h3 {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.25; }
 }
-
-/*==================== HEADER / NAV ====================*/
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: var(--bg-nav);
-    backdrop-filter: blur(14px) saturate(160%);
-    -webkit-backdrop-filter: blur(14px) saturate(160%);
-    border-bottom: 1px solid var(--line);
-    transition: border-color 0.3s var(--ease);
-}
-
-.header.is-scrolled {
-    border-bottom-color: var(--line-mid);
-}
-
-.nav {
-    max-width: var(--container);
-    margin-inline: auto;
-    padding: 2rem var(--gutter);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.nav__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.1rem;
-    font-family: var(--title-font);
-    font-weight: 600;
-    font-size: 1.6rem;
-    letter-spacing: -0.01em;
-    color: var(--text-0);
-}
-
-.nav__logo-mark {
-    width: 0.9rem;
-    height: 0.9rem;
-    border-radius: 2px;
-    background: var(--accent);
-    display: block;
-    flex: none;
-}
-
-.nav__list {
-    display: flex;
-    gap: 3rem;
-}
-
-.nav__link {
-    font-family: var(--mono-font);
-    font-size: 1.1rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-nav);
-    border-bottom: 1px solid transparent;
-    padding-bottom: 0.3rem;
-    display: inline-block;
-}
-
-.nav__link:hover,
-.nav__link.is-active {
-    color: var(--text-0);
-}
-
-.nav__link.is-active {
-    border-bottom-color: var(--accent);
-}
-
-.nav__toggle {
-    display: none;
-    width: 3.4rem;
-    height: 3.4rem;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-0);
-}
-
-.nav__bars,
-.nav__bars::before,
-.nav__bars::after {
-    display: block;
-    width: 1.9rem;
-    height: 1.5px;
-    background: currentColor;
-    transition: transform 0.3s var(--ease), opacity 0.2s var(--ease);
-}
-
-.nav__bars::before,
-.nav__bars::after {
-    content: "";
-    position: absolute;
-}
-
-.nav__bars::before { transform: translateY(-0.6rem); }
-.nav__bars::after { transform: translateY(0.6rem); }
-
-.nav__toggle[aria-expanded="true"] .nav__bars { background: transparent; }
-.nav__toggle[aria-expanded="true"] .nav__bars::before { transform: rotate(45deg); }
-.nav__toggle[aria-expanded="true"] .nav__bars::after { transform: rotate(-45deg); }
 
 /*==================== LAYOUT ====================*/
 .hero__inner,
@@ -714,43 +591,6 @@ h3 {
 @media (max-width: 768px) {
     :root {
         --gutter: 2.2rem;
-    }
-
-    .nav__toggle {
-        display: inline-flex;
-        position: relative;
-    }
-
-    .nav__menu {
-        position: absolute;
-        inset: 100% 0 auto;
-        background: var(--surface);
-        padding: 0 var(--gutter);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s var(--ease);
-    }
-
-    .nav__menu.show {
-        max-height: 32rem;
-        border-bottom: 1px solid var(--line);
-    }
-
-    .nav__list {
-        flex-direction: column;
-        gap: 0;
-        padding: 0.8rem 0 1.6rem;
-    }
-
-    .nav__link {
-        display: block;
-        padding: 1.3rem 0;
-        border-bottom: 1px solid var(--line-soft);
-    }
-
-    .nav__link.is-active {
-        border-bottom-color: var(--line-soft);
-        color: var(--accent);
     }
 
     .block {
