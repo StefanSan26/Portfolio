@@ -1,6 +1,6 @@
 /*==================== TOKENS ====================*/
 :root {
-    --header-height: 6.2rem;
+    --header-height: 7.1rem;
     --container: 109.2rem;
     --gutter: 4.4rem;
 
@@ -242,7 +242,7 @@ h3 {
 .nav__toggle[aria-expanded="true"] .nav__bars::after { transform: rotate(-45deg); }
 
 /*==================== LAYOUT ====================*/
-.hero,
+.hero__inner,
 .block__inner {
     max-width: var(--container);
     margin-inline: auto;
@@ -276,18 +276,22 @@ h3 {
 }
 
 /*==================== HERO ====================*/
+/* the glow spans the viewport; only the content inside is constrained */
 .hero {
-    display: grid;
-    grid-template-columns: 1.55fr 1fr;
-    gap: 6.4rem;
-    align-items: start;
     padding: 7.8rem var(--gutter) 7rem;
     background-image: radial-gradient(
-        90% 120% at 8% 0%,
+        70% 120% at 12% 0%,
         rgba(123, 163, 224, 0.1),
         transparent 60%
     );
     background-repeat: no-repeat;
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 6.4rem;
+    align-items: start;
 }
 
 .hero__status {
@@ -658,9 +662,12 @@ h3 {
     }
 
     .hero {
+        padding-top: 6rem;
+    }
+
+    .hero__inner {
         grid-template-columns: 1fr;
         gap: 4.4rem;
-        padding-top: 6rem;
     }
 
     .spec {

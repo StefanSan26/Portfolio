@@ -16,10 +16,10 @@
             href="./assets/svg/portfolio-favicon.png"
             type="image/x-icon"
         />
-        <title>Stefan Sánchez — Machine Learning Engineer</title>
+        <title>Stefan Sánchez — Data Scientist</title>
         <meta
             name="description"
-            content="Machine Learning Engineer with a Civil Engineering background. I build production-grade ML systems end-to-end — from data to deployment."
+            content="Data scientist with a civil engineering background. I work across the model lifecycle — data preparation, feature engineering, training, evaluation and deployment."
         />
         <meta name="theme-color" content="#060a12" />
         <meta
@@ -30,13 +30,10 @@
             property="og:logo"
             content="https://stefans-portfolio.netlify.app/assets/svg/portfolio-favicon.png"
         />
-        <meta
-            property="og:title"
-            content="Stefan Sánchez — Machine Learning Engineer"
-        />
+        <meta property="og:title" content="Stefan Sánchez — Data Scientist" />
         <meta
             property="og:description"
-            content="Machine Learning Engineer with a Civil Engineering background. I build production-grade ML systems end-to-end."
+            content="Data scientist with a civil engineering background. I work across the model lifecycle, from data preparation to deployment."
         />
         <meta
             property="og:url"
@@ -50,7 +47,7 @@
     </head>
 
     <body>
-        <a href="#work" class="skip-link">Skip to content</a>
+        <a href="#approach" class="skip-link">Skip to content</a>
 
         <header class="header" id="header">
             <nav class="nav">
@@ -60,8 +57,8 @@
                 </a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li><a href="#work" class="nav__link" data-nav>Work</a></li>
                         <li><a href="#approach" class="nav__link" data-nav>Approach</a></li>
+                        <li><a href="#work" class="nav__link" data-nav>Work</a></li>
                         <li><a href="#stack" class="nav__link" data-nav>Stack</a></li>
                         <li><a href="#contact" class="nav__link" data-nav>Contact</a></li>
                     </ul>
@@ -81,57 +78,60 @@
         <main class="main">
             <!--==================== HERO ====================-->
             <section class="hero" id="home">
-                <div class="hero__intro">
-                    <p class="hero__status" data-reveal>
-                        <span class="status-dot" aria-hidden="true"></span>
-                        Open to ML engineering roles
-                    </p>
-                    <h1 class="hero__title" data-reveal data-reveal-delay="1">
-                        I build machine learning that
-                        <span>actually ships.</span>
-                    </h1>
-                    <p class="hero__lead" data-reveal data-reveal-delay="2">
-                        Machine Learning Engineer with a civil engineering
-                        foundation. I work the whole lifecycle — data, features,
-                        model, evaluation, and the deployment that turns it into
-                        something a user can click.
-                    </p>
-                    <div class="hero__cta" data-reveal data-reveal-delay="3">
-                        <a href="#work" class="btn btn--primary">
-                            Selected work <span class="btn__arrow">→</span>
-                        </a>
-                        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+                <div class="hero__inner">
+                    <div class="hero__intro">
+                        <p class="hero__status" data-reveal>
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Open to remote data science and ML roles
+                        </p>
+                        <h1 class="hero__title" data-reveal data-reveal-delay="1">
+                            Data scientist,
+                            <span>trained as an engineer.</span>
+                        </h1>
+                        <p class="hero__lead" data-reveal data-reveal-delay="2">
+                            I'm Stefan. I work across the model lifecycle —
+                            preparing data, engineering features, training and
+                            evaluating models, then deploying them behind an
+                            API. I've also spent the last four years building
+                            client-facing websites for a remote US team.
+                        </p>
+                        <div class="hero__cta" data-reveal data-reveal-delay="3">
+                            <a href="#work" class="btn btn--primary">
+                                Selected work <span class="btn__arrow">→</span>
+                            </a>
+                            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+                        </div>
                     </div>
-                </div>
 
-                <aside class="spec" data-reveal data-reveal-delay="2">
-                    <img
-                        class="spec__photo"
-                        src="./assets/images/gh-profile.avif"
-                        alt="Stefan Sánchez"
-                        width="480"
-                        height="480"
-                        fetchpriority="high"
-                    />
-                    <dl class="spec__rows">
-                        <div class="spec__row">
-                            <dt>Role</dt>
-                            <dd>ML Engineer</dd>
-                        </div>
-                        <div class="spec__row">
-                            <dt>Base</dt>
-                            <dd>Colombia · Remote</dd>
-                        </div>
-                        <div class="spec__row">
-                            <dt>Focus</dt>
-                            <dd>Classification · CV · Pipelines</dd>
-                        </div>
-                        <div class="spec__row">
-                            <dt>Background</dt>
-                            <dd>Civil Engineering</dd>
-                        </div>
-                    </dl>
-                </aside>
+                    <aside class="spec" data-reveal data-reveal-delay="2">
+                        <img
+                            class="spec__photo"
+                            src="./assets/images/gh-profile.avif"
+                            alt="Stefan Sánchez"
+                            width="480"
+                            height="480"
+                            fetchpriority="high"
+                        />
+                        <dl class="spec__rows">
+                            <div class="spec__row">
+                                <dt>Role</dt>
+                                <dd>Data Scientist</dd>
+                            </div>
+                            <div class="spec__row">
+                                <dt>Base</dt>
+                                <dd>Colombia · Remote</dd>
+                            </div>
+                            <div class="spec__row">
+                                <dt>Focus</dt>
+                                <dd>Classification · Pipelines · Deployment</dd>
+                            </div>
+                            <div class="spec__row">
+                                <dt>Background</dt>
+                                <dd>Civil Engineering</dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </div>
             </section>
 
             <!--==================== APPROACH ====================-->
@@ -140,11 +140,12 @@
                     <h2 class="block__label" data-reveal>01 — Approach</h2>
                     <div class="block__body">
                         <p class="approach__text" data-reveal>
-                            Trained as a civil engineer, so I start from the
-                            maths and the constraints.
+                            I came to data science from civil engineering, so I
+                            usually start with the maths and the constraints.
                             <span>
-                                A model that never leaves the notebook isn't
-                                finished — I care about the last mile.
+                                The part I enjoy most comes after the model
+                                works — the pipeline, the tracking, and the API
+                                that lets someone else use it.
                             </span>
                         </p>
                     </div>
@@ -170,22 +171,27 @@
                             </div>
                             <div class="project__body">
                                 <p class="project__eyebrow">
-                                    End-to-end · Deployed app
+                                    Classification · Deployed app
                                 </p>
                                 <h3 class="project__title">
                                     Bank Customer Churn Prediction
                                 </h3>
                                 <p class="project__desc">
-                                    Will this customer stay or close the account?
-                                    A CatBoost classifier taken the whole way —
-                                    feature engineering, evaluation, and a
-                                    deployed web app anyone can try.
+                                    A CatBoost classifier that flags bank
+                                    customers likely to close their account —
+                                    0.89 AUC and 81% recall on the held-out test
+                                    set. Training and inference run as Metaflow
+                                    pipelines with each run logged to MLflow,
+                                    and the model is served as a FastAPI
+                                    endpoint in Docker.
                                 </p>
                                 <ul class="project__tags">
                                     <li class="tag">Python</li>
                                     <li class="tag">CatBoost</li>
-                                    <li class="tag">scikit-learn</li>
-                                    <li class="tag">Deployment</li>
+                                    <li class="tag">Metaflow</li>
+                                    <li class="tag">MLflow</li>
+                                    <li class="tag">FastAPI</li>
+                                    <li class="tag">Docker</li>
                                 </ul>
                                 <div class="project__links">
                                     <a
@@ -209,8 +215,8 @@
                         <article class="project" data-reveal>
                             <div class="project__media">
                                 <img
-                                    src="./assets/covers/classifier.webp"
-                                    alt="Feature-map grid from the image classifier with a detection frame"
+                                    src="./assets/covers/insurance.webp"
+                                    alt="Grouped benchmark chart comparing ensemble models"
                                     width="1200"
                                     height="860"
                                     loading="lazy"
@@ -219,26 +225,28 @@
                             </div>
                             <div class="project__body">
                                 <p class="project__eyebrow">
-                                    Computer vision · Notebook
+                                    Classification · Kaggle
                                 </p>
                                 <h3 class="project__title">
-                                    Cats &amp; Dogs Image Classifier
+                                    Insurance Cross-Sell Prediction
                                 </h3>
                                 <p class="project__desc">
-                                    A convolutional net built on transfer
-                                    learning — Xception with ImageNet weights,
-                                    fine-tuned and evaluated on held-out images.
+                                    Benchmarked several ensemble classifiers to
+                                    predict which customers would accept an auto
+                                    insurance offer, choosing the final model on
+                                    validation scores after exploratory analysis
+                                    and feature engineering.
                                 </p>
                                 <ul class="project__tags">
-                                    <li class="tag">TensorFlow</li>
-                                    <li class="tag">CNN</li>
-                                    <li class="tag">Transfer learning</li>
-                                    <li class="tag">Xception</li>
+                                    <li class="tag">Python</li>
+                                    <li class="tag">scikit-learn</li>
+                                    <li class="tag">Ensembles</li>
+                                    <li class="tag">Feature engineering</li>
                                 </ul>
                                 <div class="project__links">
                                     <a
                                         class="link-btn"
-                                        href="https://www.kaggle.com/code/stefansanchez26/cats-and-dogs-classifier/"
+                                        href="https://www.kaggle.com/code/stefansanchez26/ml-ensemble-models/notebook"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         >Notebook <span aria-hidden="true">↗</span></a
@@ -250,8 +258,8 @@
                         <article class="project" data-reveal>
                             <div class="project__media">
                                 <img
-                                    src="./assets/covers/insurance.webp"
-                                    alt="Grouped benchmark chart comparing ensemble models"
+                                    src="./assets/covers/classifier.webp"
+                                    alt="Feature-map grid from the image classifier with a detection frame"
                                     width="1200"
                                     height="860"
                                     loading="lazy"
@@ -260,27 +268,26 @@
                             </div>
                             <div class="project__body">
                                 <p class="project__eyebrow">
-                                    Tabular ML · Kaggle
+                                    Transfer learning · Notebook
                                 </p>
                                 <h3 class="project__title">
-                                    Insurance Cross-Selling Prediction
+                                    Cats &amp; Dogs Image Classifier
                                 </h3>
                                 <p class="project__desc">
-                                    Which customers respond to an auto-insurance
-                                    offer? Benchmarked a set of ensemble models
-                                    against engineered features to find the
-                                    strongest signal.
+                                    Fine-tuned an Xception convolutional network
+                                    with ImageNet pretrained weights on GPU to
+                                    classify images as cat or dog.
                                 </p>
                                 <ul class="project__tags">
-                                    <li class="tag">Python</li>
-                                    <li class="tag">Ensembles</li>
-                                    <li class="tag">Feature engineering</li>
-                                    <li class="tag">Kaggle</li>
+                                    <li class="tag">TensorFlow</li>
+                                    <li class="tag">Keras</li>
+                                    <li class="tag">Xception</li>
+                                    <li class="tag">Transfer learning</li>
                                 </ul>
                                 <div class="project__links">
                                     <a
                                         class="link-btn"
-                                        href="https://www.kaggle.com/code/stefansanchez26/ml-ensemble-models/notebook"
+                                        href="https://www.kaggle.com/code/stefansanchez26/cats-and-dogs-classifier/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         >Notebook <span aria-hidden="true">↗</span></a
@@ -331,7 +338,7 @@
                                 />
                                 <div>
                                     <h3 class="stack__name">TensorFlow</h3>
-                                    <p class="stack__desc">Deep learning</p>
+                                    <p class="stack__desc">Keras, CNNs</p>
                                 </div>
                             </article>
                             <article class="stack__cell">
@@ -343,7 +350,7 @@
                                 />
                                 <div>
                                     <h3 class="stack__name">MLflow</h3>
-                                    <p class="stack__desc">Tracking</p>
+                                    <p class="stack__desc">Experiment tracking</p>
                                 </div>
                             </article>
                             <article class="stack__cell">
@@ -355,7 +362,7 @@
                                 />
                                 <div>
                                     <h3 class="stack__name">SQL</h3>
-                                    <p class="stack__desc">Data wrangling</p>
+                                    <p class="stack__desc">Queries</p>
                                 </div>
                             </article>
                             <article class="stack__cell">
@@ -393,7 +400,7 @@
                                 />
                                 <div>
                                     <h3 class="stack__name">Kaggle</h3>
-                                    <p class="stack__desc">Competitions</p>
+                                    <p class="stack__desc">Notebooks</p>
                                 </div>
                             </article>
                         </div>
@@ -406,9 +413,7 @@
                 <div class="block__inner">
                     <h2 class="block__label" data-reveal>04 — Contact</h2>
                     <div class="block__body">
-                        <h3 class="contact__title" data-reveal>
-                            Got an ML problem worth solving?
-                        </h3>
+                        <h3 class="contact__title" data-reveal>Get in touch.</h3>
                         <a
                             class="contact__email"
                             href="mailto:stefan.san26@gmail.com"

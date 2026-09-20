@@ -45,28 +45,68 @@ document
     .querySelectorAll("[data-reveal]")
     .forEach((el) => revealObserver.observe(el));
 
-const navBySection = new Map();
-document.querySelectorAll(".nav__link[data-nav]").forEach((link) => {
-    const id = link.getAttribute("href")?.replace("#", "");
-    if (id) navBySection.set(id, link);
-});
+const spyTargets = [...document.querySelectorAll(".nav__link[data-nav]")]
+    .map((link) => ({
+        link,
+        section: document.getElementById(
+            link.getAttribute("href").replace("#", "")
+        ),
+    }))
+    .filter((t) => t.section)
+    .sort((a, b) => a.section.offsetTop - b.section.offsetTop);
 
-const sectionObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            const link = navBySection.get(entry.target.id);
-            if (!link) return;
-            if (entry.isIntersecting) {
-                document
-                    .querySelectorAll(".nav__link.is-active")
-                    .forEach((el) => el.classList.remove("is-active"));
-                link.classList.add("is-active");
-            }
-        });
-    },
-    { rootMargin: "-45% 0px -50% 0px" }
+// Holds the link you clicked, because the last sections share the final
+// screenful — without this, clicking "Stack" would light up "Contact".
+let lockedLink = null;
+
+navLinks.forEach((link) =>
+    link.addEventListener("click", () => {
+        lockedLink = link;
+        updateActiveLink();
+    })
 );
-navBySection.forEach((_, id) => {
-    const section = document.getElementById(id);
-    if (section) sectionObserver.observe(section);
-});
+
+// pointerdown covers dragging the scrollbar, which fires no wheel event
+["wheel", "touchstart", "keydown", "pointerdown"].forEach((evt) =>
+    window.addEventListener(
+        evt,
+        () => {
+            lockedLink = null;
+        },
+        { passive: true }
+    )
+);
+
+function updateActiveLink() {
+    const line = window.innerHeight * 0.32;
+    let current = spyTargets.find((t) => t.link === lockedLink) ?? null;
+
+    if (!lockedLink) {
+        for (const t of spyTargets) {
+            if (t.section.getBoundingClientRect().top <= line) current = t;
+        }
+        // the last section is too short to ever reach the line on its own
+        const atBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 2;
+        if (atBottom) current = spyTargets[spyTargets.length - 1];
+    }
+
+    spyTargets.forEach((t) =>
+        t.link.classList.toggle("is-active", t === current)
+    );
+}
+
+let spyQueued = false;
+function queueActiveLink() {
+    if (spyQueued) return;
+    spyQueued = true;
+    requestAnimationFrame(() => {
+        spyQueued = false;
+        updateActiveLink();
+    });
+}
+
+window.addEventListener("scroll", queueActiveLink, { passive: true });
+window.addEventListener("resize", queueActiveLink);
+updateActiveLink();
