@@ -1,38 +1,29 @@
-const navOpen = document.getElementById("nav-open");
-const navToggle = document.getElementById("nav-toggle");
-const navMenu = document.getElementById("nav-menu");
-const navLinks = document.querySelectorAll(".nav__link");
-const header = document.getElementById("header");
+import Lenis from "lenis";
 
-function toggleMenu(forceClose = false) {
-    if (forceClose) {
-        navMenu.classList.remove("show");
-        return;
+// inertial scrolling is a vestibular trigger, so it stays opt-out
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+    .matches;
+
+if (!reduceMotion) {
+    const lenis = new Lenis({ duration: 1.1 });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
-    navMenu.classList.toggle("show");
+    requestAnimationFrame(raf);
+
+    // Lenis owns the scroll position, so in-page links go through it
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const target = document.querySelector(link.getAttribute("href"));
+            if (!target) return;
+            event.preventDefault();
+            lenis.scrollTo(target, { offset: -20 });
+        });
+    });
 }
 
-navToggle?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    toggleMenu();
-});
-
-navLinks.forEach((link) =>
-    link.addEventListener("click", () => toggleMenu(true))
-);
-
-document.addEventListener("click", (e) => {
-    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-        toggleMenu(true);
-    }
-});
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 12) header?.classList.add("is-scrolled");
-    else header?.classList.remove("is-scrolled");
-}, { passive: true });
-
-const revealEls = document.querySelectorAll("[data-reveal]");
 const revealObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
@@ -44,40 +35,6 @@ const revealObserver = new IntersectionObserver(
     },
     { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
 );
-revealEls.forEach((el) => revealObserver.observe(el));
-
-const sections = ["about", "skills", "projects", "contact"]
-    .map((id) => document.getElementById(id))
-    .filter(Boolean);
-const navBySection = new Map();
-document.querySelectorAll(".nav__link[data-nav]").forEach((link) => {
-    const id = link.getAttribute("href")?.replace("#", "");
-    if (id) navBySection.set(id, link);
-});
-
-const sectionObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            const link = navBySection.get(entry.target.id);
-            if (!link) return;
-            if (entry.isIntersecting) {
-                document
-                    .querySelectorAll(".nav__link.is-active")
-                    .forEach((el) => el.classList.remove("is-active"));
-                link.classList.add("is-active");
-            }
-        });
-    },
-    { rootMargin: "-45% 0px -50% 0px" }
-);
-sections.forEach((s) => sectionObserver.observe(s));
-
-document.querySelectorAll(".skill-card").forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty("--mx", `${x}%`);
-        card.style.setProperty("--my", `${y}%`);
-    });
-});
+document
+    .querySelectorAll("[data-reveal]")
+    .forEach((el) => revealObserver.observe(el));
