@@ -1,38 +1,35 @@
-const navOpen = document.getElementById("nav-open");
 const navToggle = document.getElementById("nav-toggle");
 const navMenu = document.getElementById("nav-menu");
 const navLinks = document.querySelectorAll(".nav__link");
 const header = document.getElementById("header");
 
-function toggleMenu(forceClose = false) {
-    if (forceClose) {
-        navMenu.classList.remove("show");
-        return;
-    }
-    navMenu.classList.toggle("show");
+function setMenu(open) {
+    navMenu.classList.toggle("show", open);
+    navToggle.setAttribute("aria-expanded", String(open));
 }
 
 navToggle?.addEventListener("click", (e) => {
     e.stopPropagation();
-    toggleMenu();
+    setMenu(!navMenu.classList.contains("show"));
 });
 
-navLinks.forEach((link) =>
-    link.addEventListener("click", () => toggleMenu(true))
-);
+navLinks.forEach((link) => link.addEventListener("click", () => setMenu(false)));
 
 document.addEventListener("click", (e) => {
     if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-        toggleMenu(true);
+        setMenu(false);
     }
 });
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 12) header?.classList.add("is-scrolled");
-    else header?.classList.remove("is-scrolled");
-}, { passive: true });
+window.addEventListener(
+    "scroll",
+    () => {
+        if (window.scrollY > 12) header?.classList.add("is-scrolled");
+        else header?.classList.remove("is-scrolled");
+    },
+    { passive: true }
+);
 
-const revealEls = document.querySelectorAll("[data-reveal]");
 const revealObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
@@ -44,11 +41,10 @@ const revealObserver = new IntersectionObserver(
     },
     { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
 );
-revealEls.forEach((el) => revealObserver.observe(el));
+document
+    .querySelectorAll("[data-reveal]")
+    .forEach((el) => revealObserver.observe(el));
 
-const sections = ["about", "skills", "projects", "contact"]
-    .map((id) => document.getElementById(id))
-    .filter(Boolean);
 const navBySection = new Map();
 document.querySelectorAll(".nav__link[data-nav]").forEach((link) => {
     const id = link.getAttribute("href")?.replace("#", "");
@@ -70,14 +66,7 @@ const sectionObserver = new IntersectionObserver(
     },
     { rootMargin: "-45% 0px -50% 0px" }
 );
-sections.forEach((s) => sectionObserver.observe(s));
-
-document.querySelectorAll(".skill-card").forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty("--mx", `${x}%`);
-        card.style.setProperty("--my", `${y}%`);
-    });
+navBySection.forEach((_, id) => {
+    const section = document.getElementById(id);
+    if (section) sectionObserver.observe(section);
 });
